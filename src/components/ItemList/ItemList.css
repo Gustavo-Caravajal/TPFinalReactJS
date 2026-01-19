@@ -1,7 +1,3 @@
-.item-list-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 2rem;
-  flex-wrap: wrap;
+.no-products{
+    color: black;
 }

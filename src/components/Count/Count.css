@@ -1,12 +1,33 @@
-.count-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
+.count-container{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    justify-content: center;
+    gap: .5rem;
+    align-items: center;
 }
 
-.count-buttons {
-  display: flex;
-  align-items: center;
-  gap: 10px;
+.count{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: .5rem;
+    align-items: center;
+}
+
+.button-count{
+    background-color: rgb(255, 251, 195);
+    padding: .3rem 1rem;
+    color: black;
+}
+
+.button-confirm{
+    background-color: rgb(255, 251, 195);
+    padding: 0.3rem 0;
+    width: 75%;
+    color: black;
+}
+
+.value{
+    color: black;
 }

@@ -1,1 +1,17 @@
-/* Borre todo el css de App que venia por defecto */
+#root {
+  min-height: 100vh;
+  width: 100%;
+  background-color: rgb(222, 228, 235);
+}
+
+.app {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 2.5rem;
+  background-color: rgb(222, 228, 235);
+  
+}

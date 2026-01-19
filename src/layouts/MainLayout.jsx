@@ -1,12 +1,15 @@
-import { Outlet } from "react-router-dom"
-import { Header } from "../components/Header/Header"
+import { Outlet } from "react-router-dom";
+import { Footer } from "../components/Footer/Footer";
+import { Header } from "../components/Header/Header";
+
 export const MainLayout = () => {
     return (
         <>
             <Header />
-            <main className="main-content">
+            <section >
                 <Outlet />
-            </main>
+            </section>
+            <Footer />
         </>
     );
 };

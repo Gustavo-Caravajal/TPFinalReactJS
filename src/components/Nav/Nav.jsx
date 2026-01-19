@@ -1,32 +1,55 @@
 import { Link } from "react-router-dom";
 import { useCartContext } from "../../context/CartContext/useCartContext";
-import "./Nav.css";
-
+import "./Nav.css"
+import { FaShoppingCart } from "react-icons/fa";
+import { useState } from "react";
 export const Nav = () => {
-  const { getTotalItems } = useCartContext();
+    const { getTotalItems } = useCartContext();
+    const [openMenu, setOpenMenu] = useState(false);
+    
+    const toggleMenu = () => {
+        setOpenMenu(!openMenu);
+    };
+    
+    return (
+        <>  <div className="nav-container">
+            <div className="hamburger-container">
+                <button className="hamburger" onClick={toggleMenu}>☰</button>
+            </div>
 
-  //Dejamos los Link preparados para cuando hagamos filtrado por categoria
-  //Por ahora, quedan de vista, pero sirven al tocar para escribir la ruta
-  //en la barra de busqueda
-  return (
-    <nav>
-      <ul>
-        <li>
-          <Link to={"/"}>Home</Link>
-        </li>
-        <li>
-          <Link to={"/category/salado"}>Salado</Link>
-        </li>
-        <li>
-          <Link to={"/category/dulce"}>Dulce</Link>
-        </li>
-        <li>
-          <Link to={"/carrito"}>Carrito</Link>
-          {getTotalItems() > 0 && (
-            <span className="in-cart">{getTotalItems()}</span>
-          )}
-        </li>
-      </ul>
-    </nav>
-  );
-};
+            <div className={`category-container ${openMenu ? "open" : ""}`}>
+                <ul className="nav-items">
+                    <li>
+                        <Link className="item" to="/category/samsung" onClick={toggleMenu}>Samsung</Link>
+                    </li>
+                    <li>
+                        <Link className="item" to="/category/apple" onClick={toggleMenu}>Apple</Link>
+                    </li>
+                    <li>
+                        <Link className="item" to="/category/xiaomi" onClick={toggleMenu}>Xiaomi</Link>
+                    </li>
+                    <li>
+                        <Link className="item" to="/category/realme" onClick={toggleMenu}>Realme</Link>
+                    </li>
+                    <li>
+                        <Link className="item" to="/category/motorola" onClick={toggleMenu}>Motorola</Link>
+                    </li>
+                </ul>
+            </div>
+            <nav className={openMenu ? "open" : ""}>
+                <ul className="nav-items">
+                    <li>
+                        <Link className="item" to={`/`} onClick={toggleMenu}>Inicio</Link>
+                    </li>
+                    <li className="item-carrito" onClick={toggleMenu}>
+                        <Link className="item" to={"/carrito"}><FaShoppingCart size={24} /></Link>
+                        {getTotalItems() > 0 && (
+                            <span className="total-items">{getTotalItems()}</span>
+                        )}
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        </>
+    );
+}

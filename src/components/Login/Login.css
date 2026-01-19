@@ -1,0 +1,39 @@
+.form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    background-color: rgb(106, 106, 238);
+    border-radius: 10px;
+    padding: 1rem 1rem 2rem 1rem;
+}
+
+.form-field{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.form-title,.field-label, .form-label{
+    color: rgb(216, 216, 216);
+}
+
+.form-input{
+    background-color: rgb(87, 87, 179);
+    border: none;
+    padding: 0.3rem;
+    border-radius: 5px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+}
+
+.form-input::placeholder{
+    color: white;
+}
+
+.form-submit{
+    background-color: rgb(219, 219, 219);
+}

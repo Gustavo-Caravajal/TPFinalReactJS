@@ -1,32 +1,34 @@
 import { useState } from "react";
-import { AuthContext } from "./AuthContext"
-export const AuthProvider = ({children}) => {
+import { AuthContext } from "./AuthContext";
+
+export const AuthProvider = ({ children }) => {
     const [user, setUser] = useState(() => {
         const saved = sessionStorage.getItem("session");
-        if(saved){
+        if (saved) {
             return JSON.parse(saved);
-        }else{
-            return null;
         }
+        return null;
     });
 
-    const login = (name,password) => {
-        if(name=="admin" && password=="1234"){
-            const session = { name}
+    const login = (name, password) => {
+        if (name === "admin" && password === "1234") {
+            const session = { name };
             setUser(session);
-            sessionStorage.setItem("session",JSON.stringify(session));
+            sessionStorage.setItem("session", JSON.stringify(session));
             return true;
-        }else{
-            return false;
         }
+        return false;
     };
+
     const logout = () => {
         sessionStorage.removeItem("session");
         setUser(null);
         alert("Cerrando sesion");
     };
 
-    return <AuthContext.Provider value={{ user, login, logout }}>
-        {children}
-    </AuthContext.Provider>
+    return (
+        <AuthContext.Provider value={{ user, login, logout }}>
+            {children}
+        </AuthContext.Provider>
+    );
 };

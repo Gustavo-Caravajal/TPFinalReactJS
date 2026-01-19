@@ -1,36 +1,116 @@
 nav {
-  width: 100%;
+    display: flex;
+    flex-direction: row;
 }
 
-nav ul {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 15px;
-  margin: 0;
-  padding: 0;
+.nav-container {
+    display: flex;
+    flex-direction: row;
+    padding-right: 1rem;
 }
 
-nav ul li a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
+ul.nav-items {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: center;
+    padding: 0;
+
 }
 
-nav ul li a:hover {
-  text-decoration: underline;
+.item {
+    color: rgb(0, 0, 0);
 }
 
-.in-cart {
-  background-color: red;
-  font-size: 0.75rem;
-  font-weight: bold;
-  color: white;
-  border-radius: 50%;
-  padding: 0.25em 0.5em;
-  display: inline-block;
-  min-width: 20px; /* asegura que sea redondo aunque sea "1" */
-  text-align: center;
-  margin-left: 0.25rem;
+.item:hover {
+    color: black;
+    border-bottom: 2px solid gold;
+}
+
+ul {
+    list-style: none;
+}
+
+.item-carrito {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.category-container {
+    flex: 0.95;
+    display: flex;
+    justify-content: center;
+}
+
+.hamburger {
+    display: none;
+
+}
+
+@media (max-width: 768px) {
+
+    .hamburger-container {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        padding: 0.5rem 1rem;
+    }
+
+    .hamburger {
+        display: flex;
+        align-self: center;
+        background: none;
+        border: none;
+        font-size: 1.6rem;
+        padding: 0;
+    }
+
+    .category-container,
+    nav {
+        display: none;
+    }
+
+    .category-container.open,
+    nav.open {
+        display: block;
+        width: 100%;
+    }
+
+    .nav-items {
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        gap: 1rem;
+        padding: 0 1rem;
+    }
+
+    .nav-items>li {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    nav.open {
+        order: 1;
+    }
+
+    .category-container.open {
+        order: 2;
+    }
+
+    div.nav-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: flex-start;
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        overflow-y: auto;
+        z-index: 1000;
+        background-color: rgb(222, 228, 235);
+        padding-right: 1rem;
+
+    }
 }

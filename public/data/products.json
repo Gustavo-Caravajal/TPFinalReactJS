@@ -1,26 +1,26 @@
 [
   {
     "id": "1",
-    "name": "Budín de limón",
-    "price": 4500,
-    "category": "dulce",
-    "description": "Budín húmedo de limón con glaseado casero.",
-    "imageUrl": "/images/budin-limon.jpg"
+    "name": "iPhone 15 Pro",
+    "category": "apple",
+    "price": 160000,
+    "description": "Último modelo de Apple con pantalla OLED y cámara triple de 48 MP.",
+    "imageUrl": "/images/iphone-15-pro.png"
   },
   {
     "id": "2",
-    "name": "Pan de masa madre",
-    "price": 3200,
-    "category": "salado",
-    "description": "Hogaza de 750 g con fermentación lenta de 24 horas.",
-    "imageUrl": "/images/pan-masa-madre.jpg"
+    "name": "Samsung Galaxy S24",
+    "category": "android",
+    "price": 160000,
+    "description": "Teléfono con pantalla AMOLED de 120 Hz y cámara cuádruple de 50 MP.",
+    "imageUrl": "/images/galaxy-s24.png"
   },
   {
     "id": "3",
-    "name": "Croissant de manteca",
-    "category": "dulce",
-    "price": 1200,
-    "description": "Hojaldre 100% manteca, crujiente por fuera y tierno por dentro.",
-    "imageUrl": "/images/croissant.jpg"
+    "name": "Xiaomi Redmi Note 13",    
+    "category": "android",
+    "price": 65000,
+    "description": "Móvil económico con batería de 5000 mAh y cámara principal de 108 MP.",
+    "imageUrl": "/images/redmi-note-13.png"
   }
 ]

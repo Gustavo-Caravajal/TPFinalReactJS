@@ -1,0 +1,23 @@
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding-left: 1rem;
+}
+
+.logo {
+  font-size: 30px;
+  color: rgb(150, 129, 10);
+  text-shadow:
+    2px 0 #003333,
+    -2px 0 #003333,
+    0 2px #003333,
+    0 -2px #003333;
+}
+
+header > .nav-container {
+  flex: 1;          
+  display: flex;
+}

@@ -1,19 +1,69 @@
-.item-list-container h2 {
-  width: 100%;
-  text-align: center;
-  margin: 2rem;
+.product-section{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    width: 100%;
+    padding: 2rem;
 }
 
-.btn-container {
-  width: 100%;
-  margin-top: 2rem;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 2rem;
+.title{
+    margin: 0;
+    align-self: center;
+    padding: 2rem 0;
+    color: black;
 }
 
-.total-pagar {
-  width: 100%;
-  text-align: center;
+.product-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 3rem;
+    width: 100%;
+}
+
+.total-price,.quantity{
+    color: black;
+}
+
+.total-price{
+    color: rgb(0, 0, 0);
+}
+
+.boton-negocio{    
+    background-color: rgb(255, 255, 255);
+    padding: .3rem 1rem;
+    color: black;
+    background-color: rgb(226, 223, 179);
+}
+
+.boton-negocio:hover{    
+    border: 1px solid rgb(112, 112, 112);
+}
+
+
+.button-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.cart-button-container{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.back-home{
+    color: rgb(131, 127, 71);   
+}
+
+.back-home:hover{
+    color: rgb(161, 155, 63);   
+}
+
+.empty-cart{
+    color: black;
 }

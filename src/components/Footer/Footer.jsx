@@ -1,7 +1,9 @@
+import "./Footer.css"
+
 export const Footer = () => {
-  return (
-    <footer>
-      <p>Pagina creada por Beluzita</p>
-    </footer>
-  );
+    return (
+        <footer>
+            <p>Pagina creada por Gustavo</p>
+        </footer>
+    );
 };

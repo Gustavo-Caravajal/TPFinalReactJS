@@ -1,5 +1,11 @@
-.detail-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+main.product-container {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    position: relative;
+}
+
+.detail-product,
+.loading {
+    color: black;
 }

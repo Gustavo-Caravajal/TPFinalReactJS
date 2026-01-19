@@ -1,4 +1,26 @@
-.container h1 {
-  text-align: center;
-  padding: 3rem;
+section.product-section {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(222, 228, 235);
+    width: 100%;
+    position: relative;
+}
+
+.title {
+    margin: 0;
+    align-self: center;
+    padding: 0 auto;
+    color: black;
+    background-color: rgb(222, 228, 235);
+}
+
+.product-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 3rem;
+    width: 100%;
+    background-color: rgb(222, 228, 235);
 }
