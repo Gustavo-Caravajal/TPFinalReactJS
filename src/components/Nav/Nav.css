@@ -77,7 +77,7 @@ ul {
         width: 100%;
     }
 
-    .nav-items {
+    ul.nav-items {
         display: flex;
         flex-direction: column;
         justify-content: end;
