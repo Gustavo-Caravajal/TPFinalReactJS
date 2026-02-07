@@ -1,16 +1,132 @@
-# React + Vite
+# 🛒 TPF Final React JS - Tienda de Productos
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+📌 Proyecto Final de React JS desarrollado por Gustavo Caravajal  
+🔗 [Sitio en vivo](https://tpf-inal-react-js.vercel.app/)
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📝 Descripción
 
-## React Compiler
+Esta aplicación es una **tienda de productos** construida con **React**, que incluye:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Catálogo de productos por categorías.
+- Detalle individual de productos.
+- Carrito de compras con cantidad de productos, total y checkout.
+- Panel de administración para **alta de productos**.
+- Sistema de **Login y rutas protegidas** con React Router.
 
-## Expanding the ESLint configuration
+El proyecto utiliza **Context API** para manejar el carrito de compras y la sesión de usuario.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🚀 Tecnologías
+
+- React 18  
+- React Router DOM  
+- Context API (para carrito y autenticación)  
+- Fetch API para CRUD de productos con MockAPI  
+- CSS modular para componentes  
+- Despliegue en **Vercel**  
+
+---
+
+## 📁 Estructura del Proyecto
+
+src/
+├─ components/
+│ ├─ Cart/
+│ ├─ Count/
+│ ├─ Footer/
+│ ├─ Header/
+│ ├─ Item/
+│ ├─ ItemDetail/
+│ ├─ ItemDetailContainer/
+│ ├─ ItemList/
+│ ├─ ItemListContainer/
+│ ├─ Login/
+│ ├─ Nav/
+│ ├─ RutaProtegida/
+│ ├─ adminComponents/
+│ │ └─ ProductFormContainer/
+│ │ └─ ProductFormUI/
+├─ context/
+│ ├─ AuthContext/
+│ │ └─ AuthProvider.jsx
+│ └─ CartContext/
+│   └─ CartProvider.jsx
+├─ layouts/
+│ ├─ AdminLayout.jsx
+│ └─ MainLayout.jsx
+├─ services/
+│ ├─ products.js
+│ └─ uploadImage.js
+├─ utils/
+│ └─ validateProducts.js
+├─ App.jsx
+└─ index.jsx
+
+
+---
+
+## 🔑 Funcionalidades Principales
+
+### 🛍️ Catálogo y Productos
+
+- Listado de productos en la página principal y por categoría.  
+- Visualización de detalle del producto con cantidad y opción de agregar al carrito.
+
+### 🛒 Carrito de Compras
+
+- Agregar productos con cantidad.  
+- Eliminar productos o vaciar el carrito.  
+- Mostrar total a pagar y cantidad de productos.  
+- Confirmación de compra con alerta.
+
+### 🔑 Login y Panel Administrativo
+
+- Login con usuario `admin` y contraseña `1234`.
+- **Rutas protegidas**: solo usuarios autenticados pueden acceder a `/admin/alta-productos`.
+- Formulario de **alta de productos**:
+  - Nombre, precio, categoría, descripción e imagen.
+  - Validación de campos antes de enviar.
+  - Subida de imagen a Imgbb.
+  - Creación de producto mediante API (MockAPI).
+
+### 📂 Context API
+
+- **CartContext**: gestión del carrito (agregar, eliminar, vaciar, total, checkout).  
+- **AuthContext**: gestión de sesión de usuario, login y logout.
+
+---
+
+## ⚡ Instalación y Ejecución Local
+
+### 1. Clonar el repositorio
+
+
+git clone https://github.com/tu-usuario/tpf-final-react-js.git
+cd tpf-final-react-js
+### 2. Instalar dependencias
+npm install
+# o
+yarn
+
+### 3. Ejecutar la aplicación
+npm start
+# o
+yarn start
+
+
+La app correrá en http://localhost:3000.
+
+📦 Scripts Disponibles
+Script	Descripción
+npm start	    Ejecuta la app en modo desarrollo
+npm run build	Genera la versión de producción
+npm test	    Ejecuta tests (si se agregan)
+npm run lint	Corre linter (si está configurado)
+
+🌐 Despliegue
+
+La app está desplegada como SPA en Vercel.
+Asegúrate de que React Router esté configurado correctamente para evitar errores 404 al refrescar rutas internas.
