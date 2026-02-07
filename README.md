@@ -34,9 +34,13 @@ El proyecto utiliza **Context API** para manejar el carrito de compras y la sesi
 ```
 src/
 ├─ components/
+│ ├─ adminComponents/
+│ │ └─ ProductFormContainer/
+│ │ └─ ProductFormUI/
 │ ├─ Cart/
 │ ├─ Count/
 │ ├─ Footer/
+│ ├─ Form/
 │ ├─ Header/
 │ ├─ Item/
 │ ├─ ItemDetail/
@@ -46,14 +50,9 @@ src/
 │ ├─ Login/
 │ ├─ Nav/
 │ ├─ RutaProtegida/
-│ ├─ adminComponents/
-│ │ └─ ProductFormContainer/
-│ │ └─ ProductFormUI/
 ├─ context/
 │ ├─ AuthContext/
-│ │ └─ AuthProvider.jsx
 │ └─ CartContext/
-│   └─ CartProvider.jsx
 ├─ layouts/
 │ ├─ AdminLayout.jsx
 │ └─ MainLayout.jsx
