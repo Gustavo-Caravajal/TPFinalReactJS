@@ -31,7 +31,7 @@ El proyecto utiliza **Context API** para manejar el carrito de compras y la sesi
 ---
 
 ## 📁 Estructura del Proyecto
-
+```
 src/
 ├─ components/
 │ ├─ Cart/
@@ -64,7 +64,7 @@ src/
 │ └─ validateProducts.js
 ├─ App.jsx
 └─ index.jsx
-
+```
 
 ---
 
